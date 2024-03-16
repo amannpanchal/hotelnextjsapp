@@ -1,33 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+    padding : 0;
+    margin : 0;
+    font-family: "Barlow", sans-serif;
+        font-weight: 500;
+        font-style: normal;
 }
+.inputField{
+    border : none;
+    padding : 5px;
+    margin : 2px ;
+    border : 3px solid white;
+    width : 250px;
+    background-color: white;
+   
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
 }
+.glass{
+    background-color: rgba(44, 44, 44, 0.436);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    width: 300px;
 
+}
+.circle {
+    position : absolute;
+    box-shadow: 2px 3px 660px 40px green ;
+    z-index: -1;
+    left : 30px;
+    
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background-color:#f2f2f2!important;
+
+    width : 100vw;
+    overflow-x : hidden;
+}
+.loginbutton{
+
+    border-radius : 22px;
+    background-color: blue;
+    padding : 10px 20px;
+    color : white;
+    border : 2px solid blue;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+
+.searchBar{
+    
+    border-radius : 30px;
+    overflow : hidden;
+    margin : auto;
+background-color: white;
+}
+.frontBackground{
+    top : 0;
+    background-color: rgba(2, 2, 2, 0.666);
+
+    
+
+}
+.imagePic{
+    position : absolute;
+    top : 0;
+   
+    z-index: -1;
+    height : 50vh;
+    object-fit: cover;
+}
+.dataCard{
+    box-shadow: 0.01px 0.01px 5px 0.01px black!important;
+}
+.carousel  .control-dots {
+    display: none!important;
+}
+@media(min-width : 1000px) {
+        .slider-wrapper {
+                height: 75vh;
+        
+                overflow: hidden;
+        
+            }
+
+}
+
+ 
+.control-arrow{
+    display : none;
+}
+.footerItems{
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin : auto;
 }
